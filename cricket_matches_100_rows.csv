@@ -1,0 +1,101 @@
+match_id,date,team1,team2,winner,venue,player_of_match,runs_team1,runs_team2,wickets_team1,wickets_team2
+1,2025-05-06,Australia,India,Australia,Kolkata,Mitchell Starc,237,205,3,6
+2,2025-04-22,India,Bangladesh,Bangladesh,Mumbai,Litton Das,239,299,2,10
+3,2025-10-29,Sri Lanka,Australia,Sri Lanka,Melbourne,Pathum Nissanka,251,171,4,8
+4,2025-02-22,England,Australia,Australia,Hyderabad,Travis Head,203,267,8,7
+5,2025-10-02,India,New Zealand,New Zealand,Melbourne,Devon Conway,211,266,8,10
+6,2025-01-24,Pakistan,New Zealand,Pakistan,Mumbai,Shaheen Afridi,349,228,6,3
+7,2025-08-21,Australia,Pakistan,Australia,Kolkata,Travis Head,342,263,4,7
+8,2025-12-26,Pakistan,New Zealand,Pakistan,Kolkata,Shaheen Afridi,345,188,4,7
+9,2025-11-24,Bangladesh,Pakistan,Bangladesh,Kolkata,Litton Das,322,226,7,2
+10,2025-07-25,India,Sri Lanka,India,Hyderabad,Shubman Gill,248,186,5,7
+11,2025-03-15,Sri Lanka,New Zealand,Sri Lanka,Melbourne,Pathum Nissanka,247,205,5,10
+12,2025-07-05,Sri Lanka,South Africa,Sri Lanka,Sydney,Kusal Mendis,236,205,10,6
+13,2025-12-15,Australia,Bangladesh,Bangladesh,Delhi,Najmul Hossain,288,322,3,8
+14,2025-10-11,Bangladesh,South Africa,South Africa,Kolkata,Aiden Markram,182,344,8,10
+15,2025-03-22,Australia,England,Australia,Sydney,Steve Smith,296,170,6,7
+16,2025-11-08,South Africa,Sri Lanka,South Africa,London,Temba Bavuma,230,209,7,10
+17,2025-02-27,New Zealand,Pakistan,New Zealand,Chennai,Trent Boult,272,248,5,2
+18,2025-02-05,Australia,India,Australia,Melbourne,Pat Cummins,316,202,4,10
+19,2025-08-05,South Africa,Bangladesh,Bangladesh,Cape Town,Najmul Hossain,234,308,5,6
+20,2025-08-20,New Zealand,Pakistan,Pakistan,London,Babar Azam,210,233,8,3
+21,2025-01-04,Pakistan,South Africa,South Africa,Bengaluru,Temba Bavuma,198,331,6,5
+22,2025-05-02,New Zealand,India,India,London,Rohit Sharma,251,341,9,5
+23,2025-07-28,Bangladesh,Australia,Bangladesh,Melbourne,Najmul Hossain,228,194,3,8
+24,2025-12-11,Sri Lanka,Pakistan,Sri Lanka,Chennai,Maheesh Theekshana,347,335,3,2
+25,2025-05-08,New Zealand,Sri Lanka,New Zealand,Mumbai,Tom Latham,229,218,10,7
+26,2025-05-08,England,Bangladesh,Bangladesh,Melbourne,Shakib Al Hasan,199,283,6,3
+27,2025-03-27,Australia,Sri Lanka,Sri Lanka,Bengaluru,Maheesh Theekshana,284,294,9,5
+28,2025-01-02,India,Australia,India,Sydney,Shubman Gill,279,237,9,6
+29,2025-06-01,Bangladesh,Australia,Bangladesh,Bengaluru,Shakib Al Hasan,235,184,10,8
+30,2025-09-15,India,South Africa,India,Melbourne,Rohit Sharma,315,210,2,6
+31,2025-12-12,Australia,South Africa,South Africa,Mumbai,Temba Bavuma,240,273,3,5
+32,2025-10-17,Australia,Pakistan,Australia,Cape Town,Travis Head,313,250,6,5
+33,2025-03-09,Pakistan,England,Pakistan,Sydney,Babar Azam,345,246,9,7
+34,2025-10-16,India,Pakistan,India,Cape Town,Rohit Sharma,205,188,10,8
+35,2025-07-09,New Zealand,India,New Zealand,Bengaluru,Kane Williamson,252,210,9,8
+36,2025-03-10,South Africa,New Zealand,South Africa,Mumbai,Aiden Markram,247,199,3,7
+37,2025-06-25,South Africa,Bangladesh,Bangladesh,Bengaluru,Najmul Hossain,232,345,6,10
+38,2025-02-17,South Africa,Sri Lanka,South Africa,Chennai,Temba Bavuma,342,278,6,2
+39,2025-11-23,New Zealand,Sri Lanka,New Zealand,Delhi,Kane Williamson,247,211,9,9
+40,2025-10-07,Australia,India,India,Delhi,Rohit Sharma,189,264,9,4
+41,2025-01-21,India,England,India,Hyderabad,Jasprit Bumrah,271,223,5,3
+42,2025-05-02,Sri Lanka,South Africa,Sri Lanka,Delhi,Pathum Nissanka,221,215,8,7
+43,2025-05-17,Sri Lanka,Bangladesh,Sri Lanka,Bengaluru,Wanindu Hasaranga,220,197,8,9
+44,2025-06-29,Pakistan,Sri Lanka,Pakistan,Melbourne,Shaheen Afridi,258,228,5,2
+45,2025-02-05,Sri Lanka,England,England,Kolkata,Jos Buttler,251,259,10,8
+46,2025-04-02,India,Bangladesh,India,Kolkata,Shubman Gill,328,237,2,3
+47,2025-08-12,New Zealand,Bangladesh,New Zealand,Hyderabad,Trent Boult,335,300,3,8
+48,2025-01-01,South Africa,India,South Africa,Sydney,Quinton de Kock,313,307,5,7
+49,2025-11-16,Australia,New Zealand,New Zealand,Hyderabad,Devon Conway,260,339,3,6
+50,2025-12-23,Sri Lanka,England,England,Sydney,Jofra Archer,255,311,4,5
+51,2025-11-12,Sri Lanka,New Zealand,Sri Lanka,Delhi,Kusal Mendis,325,247,8,10
+52,2025-08-09,South Africa,England,South Africa,Bengaluru,Quinton de Kock,328,325,7,9
+53,2025-09-19,Bangladesh,New Zealand,Bangladesh,Bengaluru,Mustafizur Rahman,301,213,3,10
+54,2025-12-11,Australia,Sri Lanka,Australia,Bengaluru,Steve Smith,259,227,5,4
+55,2025-11-09,India,Australia,Australia,Melbourne,Mitchell Starc,198,286,9,5
+56,2025-12-02,Sri Lanka,Australia,Australia,Delhi,Mitchell Starc,181,197,7,10
+57,2025-03-04,India,South Africa,India,Bengaluru,Jasprit Bumrah,296,204,9,10
+58,2025-08-07,Bangladesh,South Africa,Bangladesh,London,Najmul Hossain,320,284,4,9
+59,2025-11-23,South Africa,Sri Lanka,Sri Lanka,Bengaluru,Pathum Nissanka,250,303,9,5
+60,2025-05-01,Bangladesh,India,India,Kolkata,Virat Kohli,249,255,7,10
+61,2025-07-16,England,Australia,Australia,Bengaluru,Travis Head,219,224,9,8
+62,2025-04-16,Bangladesh,Pakistan,Bangladesh,Chennai,Najmul Hossain,287,269,2,8
+63,2025-07-19,India,England,England,Kolkata,Jofra Archer,287,307,10,5
+64,2025-09-06,Pakistan,England,England,Sydney,Jofra Archer,187,269,7,8
+65,2025-01-14,England,South Africa,South Africa,London,Quinton de Kock,280,321,2,3
+66,2025-04-04,England,Sri Lanka,Sri Lanka,Melbourne,Maheesh Theekshana,192,236,7,7
+67,2025-05-23,New Zealand,England,New Zealand,Sydney,Kane Williamson,287,234,3,9
+68,2025-11-29,India,England,England,Bengaluru,Ben Stokes,197,336,7,2
+69,2025-05-03,India,South Africa,South Africa,Delhi,Aiden Markram,212,291,9,5
+70,2025-11-07,New Zealand,Australia,Australia,Cape Town,Travis Head,209,211,10,6
+71,2025-02-08,Sri Lanka,Pakistan,Sri Lanka,Bengaluru,Pathum Nissanka,331,330,5,3
+72,2025-01-22,Australia,Sri Lanka,Sri Lanka,Cape Town,Kusal Mendis,268,306,8,7
+73,2025-09-08,New Zealand,India,India,Sydney,Shubman Gill,207,280,7,9
+74,2025-11-30,England,New Zealand,New Zealand,London,Tom Latham,249,327,10,9
+75,2025-05-18,Sri Lanka,Bangladesh,Sri Lanka,Cape Town,Maheesh Theekshana,262,232,3,6
+76,2025-10-19,Pakistan,Sri Lanka,Sri Lanka,Melbourne,Kusal Mendis,336,341,8,7
+77,2025-04-04,Bangladesh,Sri Lanka,Bangladesh,Hyderabad,Mustafizur Rahman,304,224,7,6
+78,2025-10-12,South Africa,Bangladesh,Bangladesh,Kolkata,Najmul Hossain,182,302,7,3
+79,2025-12-20,Bangladesh,South Africa,South Africa,Bengaluru,Temba Bavuma,301,335,9,9
+80,2025-07-27,Australia,England,England,Bengaluru,Jos Buttler,242,248,7,9
+81,2025-06-19,Sri Lanka,New Zealand,New Zealand,London,Devon Conway,270,286,6,6
+82,2025-06-11,Pakistan,India,India,Bengaluru,Shubman Gill,210,307,7,5
+83,2025-09-26,South Africa,New Zealand,South Africa,Cape Town,Aiden Markram,332,242,3,5
+84,2025-06-04,Pakistan,England,England,Delhi,Joe Root,183,306,6,6
+85,2025-11-23,South Africa,New Zealand,South Africa,Delhi,Quinton de Kock,305,196,2,9
+86,2025-01-27,Bangladesh,England,England,Delhi,Jofra Archer,244,292,3,3
+87,2025-11-19,Bangladesh,India,India,Cape Town,Virat Kohli,193,208,6,7
+88,2025-11-13,Sri Lanka,South Africa,South Africa,Cape Town,Quinton de Kock,237,303,8,9
+89,2025-08-08,South Africa,Sri Lanka,Sri Lanka,Cape Town,Wanindu Hasaranga,258,315,2,3
+90,2025-03-22,Pakistan,England,Pakistan,Mumbai,Babar Azam,241,214,10,7
+91,2025-08-29,Sri Lanka,Pakistan,Sri Lanka,Cape Town,Maheesh Theekshana,254,178,5,8
+92,2025-05-16,Australia,New Zealand,Australia,Bengaluru,Steve Smith,340,320,5,8
+93,2025-05-17,Pakistan,New Zealand,Pakistan,Delhi,Mohammad Rizwan,216,188,8,10
+94,2025-12-19,Bangladesh,India,India,Melbourne,Shubman Gill,257,273,6,10
+95,2025-01-21,Bangladesh,India,Bangladesh,Cape Town,Shakib Al Hasan,290,252,6,2
+96,2025-10-28,Pakistan,New Zealand,New Zealand,Cape Town,Tom Latham,185,342,7,2
+97,2025-10-27,Bangladesh,England,England,Delhi,Jofra Archer,291,332,9,3
+98,2025-06-14,New Zealand,Pakistan,Pakistan,Hyderabad,Naseem Shah,206,211,9,8
+99,2025-06-11,India,Pakistan,Pakistan,Mumbai,Babar Azam,244,252,3,8
+100,2025-04-07,Bangladesh,Pakistan,Bangladesh,Chennai,Shakib Al Hasan,312,262,9,9
