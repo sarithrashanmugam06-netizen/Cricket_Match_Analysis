@@ -147,26 +147,44 @@ for i in range(100):
     else:
         Teams[team1[0]] = Teams[team1[0]] + team1[1]
 
-    if team1[0] not in Teams:
-            Teams[team1[0]] = team1[1]
+    if team2[0] not in Teams:
+            Teams[team2[0]] = team2[1]
     
     else:
-        Teams[team1[0]] = Teams[team1[0]] + team1[1]
+        Teams[team2[0]] = Teams[team2[0]] + team2[1]
 
-
+print("\nAverage runs of each team:")
 for team in Teams:
     average = Teams[team]/ total_count[team]
-    print("Average of each team:")
     print(team,average)
 
 
 #Find the average number of wickets taken by each team. 
 
+Wickets = {}
 
-#Find the player who received Player of the Match award the highest number of times. 
+for i in range(100):
+    team1 = cricket_dict["team1"][i], cricket_dict["wickets_team1"][i]
+    team2 = cricket_dict["team2"][i], cricket_dict["wickets_team1"][i]
 
 
-#Display the number of Player of the Match awards received by each player. 
+    if team1[0] not in Wickets:
+        Wickets[team1[0]] = team1[1]
+
+    else:
+        Wickets[team1[0]] = Wickets[team1[0]] + team1[1]
+
+    if team2[0] not in Wickets:
+            Wickets[team2[0]] = team2[1]
+    
+    else:
+        Wickets[team2[0]] = Wickets[team2[0]] + team2[1]
+
+print("\nAverage wickets of each team:")
+for team in Wickets:
+    average = Wickets[team]/ total_count[team]
+    print(team,average)
+
 
 
 
