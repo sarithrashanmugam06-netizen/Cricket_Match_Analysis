@@ -77,11 +77,11 @@ def maximum(n,a,b):
             max_key = key
 
     
-    return(f"\nMaximum {a} {max_key} with {b} of {max_value}")
+    return(f"\n{a} {max_key} {b}{max_value}")
     
 
 
-print(maximum(total_winner,"winner","count"))
+print(maximum(total_winner,"Maximun scored Winner:","Count:"))
 
 # Find the team with the lowest number of wins.
 
@@ -97,9 +97,9 @@ def minimum(n,a,b):
             min_value = value
             min_key = key
 
-    return(f"\nMinimum {a} {min_key} with {b} of {min_value}")
+    return(f"\n{a} {min_key} {b} {min_value}")
     
-print(minimum(total_winner,"winner","count"))
+print(minimum(total_winner,"Minimun scored Winner:","Count:"))
 
 
 
@@ -111,20 +111,20 @@ for key, value in cricket_dict["runs_team2"].items():
 
 #Find the match with the highest total runs scored by both teams combined. 
 
-print(maximum(tol_runs,"runner","team"))
+print(maximum(tol_runs,"highest total runs of team :","score:"))
 
 
 #Find the match with the lowest total runs scored by both teams combined.
 
-print(minimum(tol_runs,"runner","team"))
+print(minimum(tol_runs,"lowest total runs of team:","score"))
 
  #Find the highest score made by a single team in any match. 
 
 
-High_run_team1 = maximum(cricket_dict["runs_team1"],"runner","singleteam")
+High_run_team1 = maximum(cricket_dict["runs_team1"],"runner score:","singleteam ")
 
 
-High_run_team2  = maximum(cricket_dict["runs_team2"],"runner","singleteam")
+High_run_team2  = maximum(cricket_dict["runs_team2"],"runner score","singleteam ")
 
 
 high_runner = High_run_team1
@@ -184,6 +184,42 @@ print("\nAverage wickets of each team:")
 for team in Wickets:
     average = Wickets[team]/ total_count[team]
     print(team,average)
+
+#Find the player who received Player of the Match award the highest number of times. 
+
+players = count("player_of_match")
+print(maximum(players,"score","player of the match \n"))
+
+# Display the number of Player of the Match awards received by each player. 
+print(f"Player of the Match:\n{players}")
+
+# Find the venue where the highest number of matches were played. 
+venues = count("venue")
+print(maximum(venues,"highest no fo matches played venue:","count:"))
+# Display the number of matches played at each venue. 
+
+print(f"\nMatches played at each venue :\n{venues}")
+# Find the top 5 highest-scoring matches based on the combined runs of both teams. 
+
+sorted_runs = sorted(tol_runs.items(), key=lambda x: x[1],reverse=True)
+top_5 = dict(sorted_runs[0:5])
+
+print(f"\nTop 5 highest-scoring of matches:\n{top_5}") 
+
+# Find all matches where the winning team scored more than 300 runs. 
+print("\nThe winning team scored more than 300 runs:")
+for i in range(100):
+    if cricket_dict["winner"][i] == cricket_dict["team1"][i]:
+        if cricket_dict["runs_team1"][i] > 300:
+            print(f"{cricket_dict["team1"][i]} : {cricket_dict["runs_team1"][i]}")
+
+    if cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+            if cricket_dict["runs_team2"][i] > 300:
+                print(f"{cricket_dict["team2"][i]}: {cricket_dict["runs_team2"][i]}")
+
+ 
+
+
 
 
 
