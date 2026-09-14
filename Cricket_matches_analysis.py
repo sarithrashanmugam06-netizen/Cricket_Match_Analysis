@@ -154,9 +154,13 @@ for i in range(100):
         Teams[team2[0]] = Teams[team2[0]] + team2[1]
 
 print("\nAverage runs of each team:")
+
+average_runs = []
 for team in Teams:
     average = Teams[team]/ total_count[team]
+    average_runs.append((team,average))
     print(team,average)
+
 
 
 #Find the average number of wickets taken by each team. 
@@ -181,6 +185,7 @@ for i in range(100):
         Wickets[team2[0]] = Wickets[team2[0]] + team2[1]
 
 print("\nAverage wickets of each team:")
+
 for team in Wickets:
     average = Wickets[team]/ total_count[team]
     print(team,average)
@@ -217,7 +222,51 @@ for i in range(100):
             if cricket_dict["runs_team2"][i] > 300:
                 print(f"{cricket_dict["team2"][i]}: {cricket_dict["runs_team2"][i]}")
 
- 
+ #Find all matches where the difference between the two teams' scores was less than 20 runs.
+
+print("\nDifference between the two teams less than 20 runs:")
+    
+for i in range(100):
+
+    runs = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
+
+    if  runs < 20:
+        print(f"{cricket_dict["match_id"][i]} {cricket_dict["team1"][i]} and {cricket_dict["team2"][i]}:{runs}")
+
+
+
+ #Find the team with the highest average score.
+
+print("\nHighest Average score:")
+print(maximum(dict(average_runs),"higest average scored team","runs "))
+
+
+ #Find the team with the lowest average score. 
+
+print("\nlowest Average score:")
+print(minimum(dict(average_runs),"lowest average scored team","runs "))
+
+#Calculate the win percentage for each team. 
+
+Winner_counts = count("winner")
+
+print("\nWin Percentage of each team:")
+win_percentage = {}
+
+for key, value in Winner_counts.items():
+    percentage = round(value / total_count[key] * 100,2)
+    win_percentage[key] = percentage
+
+print(win_percentage)
+
+ #Display the teams ranked based on their win percentage. 
+
+print("\n Rank based win Percentage:")
+sorted_win = sorted(win_percentage.items(),key = lambda x : x[1],reverse=True)
+print(sorted_win)
+
+
+
 
 
 
