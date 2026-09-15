@@ -265,9 +265,57 @@ print("\n Rank based win Percentage:")
 sorted_win = sorted(win_percentage.items(),key = lambda x : x[1],reverse=True)
 print(sorted_win)
 
+ 
+# Find how many matches each team won while batting first. 
+
+batting = {}
+
+for i in range(100):
+
+    if cricket_dict["runs_team1"][i] > cricket_dict["runs_team2"][i]:
+
+        team = cricket_dict["team1"][i]
+
+        if team not in batting:
+            batting[team] = 0
+
+        batting[team] += 1
+
+    if cricket_dict["runs_team2"][i] > cricket_dict["runs_team1"][i]:
+    
+            team = cricket_dict["team2"][i]
+    
+            if team not in batting:
+                batting[team] = 0
+    
+            batting[team] += 1
+
+
+print(batting)
+
+# Find how many matches each team won while chasing.
+
+
+chasing = {}
+
+for i in range(100):
+
+    if cricket_dict["runs_team1"][i] < cricket_dict["runs_team2"][i]:
+
+        team = cricket_dict["team2"][i]
+
+        if team not in chasing:
+            chasing[team] = 0
+
+        chasing[team] += 1
+
+print(chasing)
 
 
 
+# #Identify the team with the highest number of successful chases. 
+
+print(maximum(chasing,"Highest number of chasing:","count:"))
 
 
 
