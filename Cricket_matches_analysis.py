@@ -317,6 +317,104 @@ print(chasing)
 
 print(maximum(chasing,"Highest number of chasing:","count:"))
 
+# Ask the user to enter a team anme and display that team's complete statistics
+
+def statistics(team):
+    statistics = []
+
+    for i in range(100):
+
+        if team == cricket_dict["team1"][i] or team == cricket_dict["team2"][i]:
+
+            match_id = cricket_dict["match_id"][i]
+            date = cricket_dict["date"][i]
+
+            if team == cricket_dict["team1"][i]:
+                opponent = cricket_dict["team2"][i]
+                runs = cricket_dict["runs_team1"][i]
+                wickets = cricket_dict["wickets_team1"][i]
+            else:
+                opponent = cricket_dict["team1"][i]
+                runs = cricket_dict["runs_team2"][i]
+                wickets = cricket_dict["wickets_team2"][i]
+
+            if team == cricket_dict["winner"][i]:
+                result = "Won"
+            else:
+                result = "Lost"
+
+            venue = cricket_dict["venue"][i]
+            player = cricket_dict["player_of_match"][i]
+
+            statistics.append({
+                "Match id": match_id,
+                "Date": date,
+                "Opponent": opponent,
+                "Runs": runs,
+                "Wickets": wickets,
+                "Result": result,
+                "Venue": venue,
+                "Player of the match": player
+            })
+
+    return statistics
+
+print(statistics("India"))
+
+# Ask the user to enter a venue and display all matches played at that venue. 
+print("\n")
+def place(venue):
+    print(f"This matches are played at {venue}")
+
+    matches = []
+
+    for i in range(100):
+        if venue == cricket_dict["venue"][i]:
+            team1 = cricket_dict["team1"][i]
+            team2 = cricket_dict["team2"][i]
+
+            matches.append({
+                "Team1":team1,
+                "Team2":team2
+                })
+
+    if len(matches) == 0:
+            return (f"No matches played on {venue}")
+        
+       
+    return matches
+
+print(place("Mumbai"))
+            
+
+ #Ask the user to enter a date and display all matches played on that date. If no match exists, display an appropriate message.
+
+print("\n")
+def date(date):
+    print(f"This match is played on {date}")
+
+    matches = []
+
+    for i in range(100):
+        if date == cricket_dict["date"][i]:
+            team1 = cricket_dict["team1"][i]
+            team2 = cricket_dict["team2"][i]
+
+            matches.append({
+                "Team1":team1,
+                "Team2":team2
+                })
+
+    if len(matches) == 0:
+            return (f"No matches played on {date}")
+        
+       
+    return matches
+
+print(date("2025-11-16"))
+
+
+
 
 
 
