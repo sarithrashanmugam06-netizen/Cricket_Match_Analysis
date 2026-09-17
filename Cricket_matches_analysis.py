@@ -413,9 +413,50 @@ def date(date):
 
 print(date("2025-11-16"))
 
+"""
+----------------------------------------------------------------------------
+                        Basic Data Handling
+----------------------------------------------------------------------------
+"""
 
 
 
+#Find the total number of matches played at each venue.
+print("\n Total number of matches played at each venue:")
+print(count("venue"))
+
+#Find the number of matches played between India and Australia. 
+Count_india_and_australia = 0
+
+for i in range(100):
+    if (cricket_dict["team1"][i] == "India" and cricket_dict["team2"][i] == "Australia") or (cricket_dict["team1"][i] == "Australia" and cricket_dict["team2"][i] == "India"):
+        Count_india_and_australia = Count_india_and_australia + 1
+
+print(f"\nIndia and Australia between matches : {Count_india_and_australia}")
 
 
+#Find all matches where India was either Team 1 or Team 2. 
+India_match = 0
+
+for i in range(100):
+    if (cricket_dict["team1"][i] == "India" or cricket_dict["team2"][i] == "India"):
+        India_match = India_match + 1
+
+print(f"\nwhere India was either Team 1 or Team 2 : {India_match}")
+
+#Find all matches where the winning team was Team 1. 
+
+def winner_count(n):
+    winner_team_count = 0
+    for i in range(100):
+        if cricket_dict[n][i] == cricket_dict["winner"][i]:
+            winner_team_count = winner_team_count +1
+
+    return winner_team_count
+
+print("\nwinner team was team 1:",winner_count("team1"))
+
+#Find all matches where the winning team was Team 2.
+
+print("\nwinner team was team 2:",winner_count("team2"))
 
