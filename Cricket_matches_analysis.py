@@ -460,3 +460,30 @@ print("\nwinner team was team 1:",winner_count("team1"))
 
 print("\nwinner team was team 2:",winner_count("team2"))
 
+#Count how many times each team appeared as Team 1. 
+
+print("\nEach team appeared as team1:\n",count("team1"))
+
+ #Count how many times each team appeared as Team 2. 
+
+print("\nEach team appeared as team2:\n",count("team2"))
+
+#Find the team that appeared in the highest number of matches. 
+
+print(maximum(total_count,"Highest number of matches played ","that's count is "))
+
+ #Find the team that appeared in the lowest number of matches. 
+
+print(minimum(total_count,"Lowest number of matches played","that's count is "))
+
+ #Find all matches played at Chennai.
+
+def venue(n):
+    count = 0
+    for i in range(100):
+        if n == cricket_dict["venue"][i]:
+            count = count + 1
+
+    return count
+
+print("\nMatches played at Chennai: ",venue("Chennai"))
