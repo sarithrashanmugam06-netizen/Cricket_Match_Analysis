@@ -487,3 +487,47 @@ def venue(n):
     return count
 
 print("\nMatches played at Chennai: ",venue("Chennai"))
+
+
+"""
+----------------------------------------------------------------------------
+                        Filtering & Conditions
+----------------------------------------------------------------------------
+"""
+
+
+
+#Find matches where Team 1 scored more than 300 runs.
+def team_score(n,m):
+    for i in range(100):
+        if cricket_dict[n][i] > 300 :
+            print(cricket_dict[m][i] ,":",cricket_dict[n][i])
+    
+print("\nTeam 1  scored more tah 300 runs:")
+team_score("runs_team1","team1")
+ #Find matches where Team 2 scored more than 300 runs. 
+
+print("\nTeam 2  scored more tah 300 runs:")
+team_score("runs_team2","team2")
+ #Find matches where both teams scored more than 250 runs.
+print("\nBoth teams scored more than 250 runs:")
+for i in range (100):
+    if cricket_dict["runs_team1"][i] > 250 and cricket_dict["runs_team2"][i] > 250:
+        print(cricket_dict["team1"][i],":",cricket_dict["runs_team1"][i], "and" ,cricket_dict["team2"][i] ,":", cricket_dict["runs_team2"][i])
+
+ #Find matches where the winning margin was more than 100 runs.\
+print("\nwinning margin was more than 100 runs:")
+for i in range(100):
+    if cricket_dict["winner"][i] == cricket_dict["team1"][i] or cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+        margin = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
+        if margin > 100:
+            print(cricket_dict["winner"][i],":",margin)
+
+ #Find matches where the winning margin was less than 10 runs. 
+
+print("\nwinning margin was less than 10 runs:")
+for i in range(100):
+    if cricket_dict["winner"][i] == cricket_dict["team1"][i] or cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+        margin = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
+        if margin < 10:
+            print(cricket_dict["winner"][i],":",margin)
