@@ -531,3 +531,43 @@ for i in range(100):
         margin = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
         if margin < 10:
             print(cricket_dict["winner"][i],":",margin)
+
+#Find matches where the winning team lost 5 or more wickets. 
+print("\nWinning team lost 5 or more wickets:")
+for i in range(100):
+    if cricket_dict["winner"][i] == cricket_dict["team1"][i]:
+        if cricket_dict["wickets_team1"][i] >= 5:
+            print(cricket_dict["winner"][i],":",cricket_dict["wickets_team1"][i]) 
+
+        if cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+            if cricket_dict["wickets_team2"][i] >= 5:
+                        print(cricket_dict["winner"][i],":",cricket_dict["wickets_team2"][i]) 
+
+
+#Find matches where either team took 10 wickets. 
+print("\nwhere either team took 10 wickets:")
+for i in range(100):
+    if cricket_dict["wickets_team1"][i] == 10 : 
+         print(cricket_dict["team1"][i],":",cricket_dict["wickets_team1"][i])
+
+    if cricket_dict["wickets_team2"][i] == 10:
+       print(cricket_dict["team2"][i],":",cricket_dict["wickets_team2"][i])
+
+#Find matches where the total runs were greater than 600. 
+print("\nThe total runs were greater than 600:")
+for i in range(100):
+    if tol_runs[i] > 600 :
+        print(cricket_dict["team1"][i],"and",cricket_dict["team2"][i],":",tol_runs[i]) 
+#Find matches where the total runs were less than 400.
+print("\nThe total runs were less than 400.") 
+for i in range(100):
+    if tol_runs[i] < 400:
+         print(cricket_dict["team1"][i],"and",cricket_dict["team2"][i],":",tol_runs[i]) 
+
+#Find matches where both teams scored almost the same number of runs, with a difference of 10 runs or less
+print("\nDifference of 10 runs or less:")
+for i in range(100):
+    diffrent = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
+    if diffrent <= 10:
+        print(cricket_dict["team1"][i],"and",cricket_dict["team2"][i],":",diffrent)
+
