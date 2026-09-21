@@ -571,3 +571,70 @@ for i in range(100):
     if diffrent <= 10:
         print(cricket_dict["team1"][i],"and",cricket_dict["team2"][i],":",diffrent)
 
+"""
+----------------------------------------------------------------------------
+                        Filtering & Conditions
+----------------------------------------------------------------------------
+"""
+venue = set()
+for i in cricket_dict["venue"]:
+    venue.add(cricket_dict["venue"][i])
+
+highest = 0
+
+for i in range(100):
+    if cricket_dict["runs_team1"][i] > highest:
+        highest = cricket_dict["runs_team1"][i]
+
+    if cricket_dict["runs_team2"][i] > highest:
+        highest = cricket_dict["runs_team2"][i]
+
+lowest = float("inf")
+for i in range(100):
+    if cricket_dict["runs_team1"][i] < lowest:
+        lowest = cricket_dict["runs_team1"][i]
+
+    if cricket_dict["runs_team2"][i] < lowest:
+        lowest = cricket_dict["runs_team2"][i]
+
+team1_win = 0
+team2_win = 0
+
+for i in range(100):
+    if cricket_dict["winner"][i] == cricket_dict["team1"][i]:
+        team1_win = team1_win + 1
+    if cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+            team2_win = team2_win + 1
+
+most_winning = maximum(Winner_counts,"","")
+
+print("""
+========================================
+       CRICKET MATCH ANALYZER
+========================================
+
+1. View Match Summary
+2. List All Teams
+3. Team Statistics
+4. Search Matches
+5. Player of the Match
+6. Venue Statistics
+7. Score Analysis
+8. Match Results
+9. Top Performers
+10. Exit
+""")
+
+choice = 1
+
+if choice == 1:
+    print("Total matches:",len(cricket_dict["match_id"]))   
+    print("Total teams:",len(teams))
+    print("total venues:",len(venue))
+    print("\n")
+    print("Highest score:",highest)
+    print("Lowest score:",lowest)
+    print("\n")
+    print("Most Matches Won:",most_winning)
+    print("Team 1 Wins:",team1_win)
+    print("Team 2 Wins:",team2_win)
