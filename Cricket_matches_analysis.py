@@ -356,6 +356,7 @@ def statistics(team):
                 "Venue": venue,
                 "Player of the match": player
             })
+            
 
     return statistics
 
@@ -625,7 +626,7 @@ print("""
 10. Exit
 """)
 
-choice = 1
+choice = 3
 
 if choice == 1:
     print("Total matches:",len(cricket_dict["match_id"]))   
@@ -638,3 +639,22 @@ if choice == 1:
     print("Most Matches Won:",most_winning)
     print("Team 1 Wins:",team1_win)
     print("Team 2 Wins:",team2_win)
+
+elif choice == 2:
+    print(teams)
+
+elif choice == 3:
+    team  = "India"
+    result = statistics(team)
+
+  
+    for match in result:
+        print("\n------------------------------")
+        print("Match ID:", match["Match id"])
+        print("Date:", match["Date"])
+        print("Opponent:", match["Opponent"])
+        print("Runs:", match["Runs"])
+        print("Wickets:", match["Wickets"])
+        print("Result:", match["Result"])
+        print("Venue:", match["Venue"])
+        print("Player of the Match:", match["Player of the match"])
