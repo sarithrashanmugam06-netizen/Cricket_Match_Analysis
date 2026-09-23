@@ -609,6 +609,18 @@ for i in range(100):
 
 most_winning = maximum(Winner_counts,"","")
 
+def display_match(i):
+    print("\n-----------------------------")
+    print("Match ID:", cricket_dict["match_id"][i])
+    print("Date:", cricket_dict["date"][i])
+    print("Team 1:", cricket_dict["team1"][i])
+    print("Team 2:", cricket_dict["team2"][i])
+    print("Winner:", cricket_dict["winner"][i])
+    print("Venue:", cricket_dict["venue"][i])
+    print("Player of the Match:", cricket_dict["player_of_match"][i])
+    print("-----------------------------")
+
+
 print("""
 ========================================
        CRICKET MATCH ANALYZER
@@ -626,7 +638,7 @@ print("""
 10. Exit
 """)
 
-choice = 3
+choice = 4
 
 if choice == 1:
     print("Total matches:",len(cricket_dict["match_id"]))   
@@ -658,3 +670,44 @@ elif choice == 3:
         print("Result:", match["Result"])
         print("Venue:", match["Venue"])
         print("Player of the Match:", match["Player of the match"])
+
+elif choice == 4:
+    search_choice = int(input("enter the choice:"))
+
+    if search_choice == 1:
+        team= input("enter the team:")
+
+        for i in range(100):
+            if team == cricket_dict["team1"][i] or team == cricket_dict["team2"][i]:
+                display_match(i)
+        
+
+    elif search_choice == 2:
+        venue = input("enter the venue:")
+        
+        for i in range(100):
+            if venue == cricket_dict["venue"][i] :
+                display_match(i)
+   
+    
+    elif search_choice == 3:
+        players= input("Enter player_of_match name:")
+        for i in range(100):
+            if players == cricket_dict["player_of_match"][i] :
+                display_match(i)
+    
+    elif search_choice == 4:
+        date= input("Enter the date:")
+        for i in range(100):
+          if date == cricket_dict["date"][i] :
+                display_match(i)
+        
+
+    elif search_choice == 5:
+         match_id= input("Enter the match ID:")
+
+         for i in range(100):
+            if match_id == cricket_dict["match_id"][i] :
+                display_match(i)
+        
+    
