@@ -638,7 +638,7 @@ print("""
 10. Exit
 """)
 
-choice = 4
+choice = 6
 
 if choice == 1:
     print("Total matches:",len(cricket_dict["match_id"]))   
@@ -671,7 +671,7 @@ elif choice == 3:
         print("Venue:", match["Venue"])
         print("Player of the Match:", match["Player of the match"])
 
-elif choice == 4:
+elif choice == 5:
     search_choice = int(input("enter the choice:"))
 
     if search_choice == 1:
@@ -709,5 +709,29 @@ elif choice == 4:
          for i in range(100):
             if match_id == cricket_dict["match_id"][i] :
                 display_match(i)
+
+elif choice == 6 :
         
-    
+    players = set(cricket_dict["player_of_match"].values())
+    print(players)
+
+    print("\n------------------------------------------")
+
+    player_count = {}
+
+    for i in range(100):
+        player = cricket_dict["player_of_match"][i]
+
+        if player not in player_count:
+            player_count[player] = 1
+        else:
+            player_count[player] += 1
+    print(player_count)
+
+    print("\n------------------------------------------")
+
+    sorted_players = sorted(player_count.items(),key=lambda x: x[1],reverse=True)
+    top_3 = sorted_players[:3]
+
+    for player, count in top_3:
+        print(player, ":", count)
