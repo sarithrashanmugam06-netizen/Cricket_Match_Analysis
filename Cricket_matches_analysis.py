@@ -620,6 +620,39 @@ def display_match(i):
     print("Player of the Match:", cricket_dict["player_of_match"][i])
     print("-----------------------------")
 
+def maxi(n):
+    max_key = None
+    max_value = 0
+    
+    for key in n:
+        value = n[key]
+        
+        if value > max_value:
+            max_value = value
+            max_key = key
+
+    
+    return(f"{max_value}")
+    
+def mini(n):
+    min_key = None
+    min_value = float("inf")
+    
+    for key in n:
+        value = n[key]
+        
+        if value < min_value:
+            min_value = value
+            min_key = key
+
+    return(f"{min_value}")
+
+combin_runs ={}
+combin_runs = cricket_dict["runs_team1"].copy()
+for key, value in cricket_dict["runs_team2"].items():
+    combin_runs[key] = combin_runs.get(key,0)+ value
+
+
 
 print("""
 ========================================
@@ -638,7 +671,7 @@ print("""
 10. Exit
 """)
 
-choice = 6
+choice = int(input("Enter the choice:"))
 
 if choice == 1:
     print("Total matches:",len(cricket_dict["match_id"]))   
@@ -735,3 +768,60 @@ elif choice == 6 :
 
     for player, count in top_3:
         print(player, ":", count)
+
+
+#7. Score Analysis
+# Highest team score. 
+# Lowest team score. 
+# Highest combined score. 
+# Top 5 highest-scoring matches. 
+# Top 5 closest matches. 
+
+elif choice == 7:
+    team1 = maxi(cricket_dict["runs_team1"])
+    team2 = maxi(cricket_dict["runs_team2"])
+
+    max = team1
+    if team1 < team2 :
+        max = team2
+
+    print(f"Highest team score:{max}")
+
+    team1 = mini(cricket_dict["runs_team1"])
+    team2 = mini(cricket_dict["runs_team2"])
+
+    min = 0
+    if team2 < team1: 
+        min = team1
+
+    if team1 < team2:
+        min = team2
+
+    print(f"lowest team score:{min}")
+
+    highest_matches = sorted(tol_runs.items(),key=lambda x: x[1],reverse=True)
+    print("\nTop 5 highest-scoring matches.")
+
+    for key, value in highest_matches[:5]:
+        print(cricket_dict["team1"][key],"and",cricket_dict["team2"][key],":",value)
+        
+    print("\nTop 5 closest matches:")
+    close_match ={}
+    for i in range(100):
+        difference = abs(cricket_dict["runs_team1"][i] - cricket_dict["runs_team2"][i])
+        if difference <= 5:
+            close_match[i] = difference
+
+    closest = sorted(close_match.items(),key=lambda x: x[1])
+    for key, value in closest[:5]:
+        print(cricket_dict["team1"][key],"and",cricket_dict["team2"][key],":",value)   
+
+
+
+
+    
+
+
+
+
+
