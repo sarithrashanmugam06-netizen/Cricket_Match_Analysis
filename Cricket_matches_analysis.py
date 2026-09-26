@@ -816,6 +816,23 @@ elif choice == 7:
     for key, value in closest[:5]:
         print(cricket_dict["team1"][key],"and",cricket_dict["team2"][key],":",value)   
 
+#8. Match Results
+# Display:
+#Match ID | Team 1 | Team 2 | Winner | Winning Margin
+#Allow the user to enter a Match ID and view complete match details.
+
+
+elif choice == 8 :
+    Match_ID = int(input())
+    for i in range(100):
+        if Match_ID == cricket_dict["match_id"][i]:
+            print("Match ID:",cricket_dict["match_id"][i])
+            print("Team 1:",cricket_dict["team1"][i])
+            print("Team 2:",cricket_dict["team2"][i])
+            print("Winner:",cricket_dict["winner"][i])
+            if cricket_dict["winner"][i] == cricket_dict["team1"][i] or cricket_dict["winner"][i] == cricket_dict["team2"][i]:
+                    margin = abs(cricket_dict["runs_team1"][i]-cricket_dict["runs_team2"][i])
+                    print("Winner Margin:",margin)
 
 
 
